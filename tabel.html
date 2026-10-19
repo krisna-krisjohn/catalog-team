@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabel Profil Biodata Siswa</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, sans-serif; }
+    
+    body { 
+      background: linear-gradient(135deg, #203837, #304d47 52%, #40584d); 
+      display: flex; 
+      flex-direction: column;
+      align-items: center; 
+      min-height: 100vh; 
+      padding: 40px 20px; 
+      gap: 35px;
+    }
+
+    .container { 
+      background: rgba(242, 241, 232, 0.98); 
+      padding: 35px; 
+      border-radius: 16px; 
+      box-shadow: 0 20px 40px rgba(8, 23, 22, 0.28); 
+      width: 100%; 
+      max-width: 650px; 
+      border: 1px solid rgba(231, 235, 218, 0.24);
+    }
+
+    h2 { 
+      color: #293e3b; 
+      margin-bottom: 25px; 
+      text-align: center; 
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    h2 span {
+      background: linear-gradient(135deg, #a85d58, #718265);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+    }
+    
+  
+    .table-responsive {
+      overflow-x: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 0 1px #d5ddd6;
+    }
+
+    table { 
+      width: 100%; 
+      border-collapse: collapse; 
+    }
+
+    th, td { 
+      padding: 14px 18px; 
+      text-align: left; 
+      border-bottom: 1px solid #dce2da; 
+      font-size: 14px; 
+    }
+
+    
+    th.header-field { 
+      background: #405e55;
+      color: #ffffff; 
+      font-weight: 700; 
+      text-transform: uppercase; 
+      font-size: 12px; 
+      letter-spacing: 1px; 
+      text-align: center;
+    }
+
+   
+    td.field-label {
+      background-color: #e4e8da;
+      font-weight: 700;
+      color: #40594e;
+      width: 35%;
+      border-right: 1px solid #dce2da;
+    }
+
+    td { 
+      color: #3e5048; 
+      font-weight: 500;
+    }
+
+    tr:last-child th, tr:last-child td { 
+      border-bottom: none; 
+    }
+
+    tr:hover td { 
+      background-color: #eaf0e8; 
+      color: #263f3b;
+    }
+
+    
+    .category-cell {
+      background-color: #e4e8da !important;
+      font-weight: 700;
+      color: #40594e;
+      vertical-align: middle;
+      text-align: center;
+      border-right: 1px solid #dce2da;
+    }
+
+    .main-header {
+      background: #263f3b !important;
+      color: #ffffff !important;
+      text-align: center;
+      letter-spacing: 1.5px;
+      font-size: 12px;
+    }
+
+    /* Status & Tombol */
+    .status-badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 18px;
+      padding: 12px;
+      background: #e5ecdf;
+      border: 1px solid #c6d2bd;
+      color: #405c4b;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .btn-back { 
+      display: block; 
+      width: 100%; 
+      text-align: center; 
+      background: #a85d58; 
+      color: white; 
+      border: none; 
+      padding: 14px; 
+      border-radius: 8px; 
+      font-size: 15px; 
+      font-weight: 700; 
+      cursor: pointer; 
+      text-decoration: none; 
+      margin-top: 25px; 
+      box-shadow: 0 4px 12px rgba(168, 93, 88, 0.22);
+      transition: all 0.2s ease-in-out; 
+    }
+
+    .btn-back:hover { 
+      background: #8c4845;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+
+  
+  <div class="container">
+    <h2>PROFIL BIODATA <span>SISWA HANDSOME</span></h2>
+    
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th class="header-field" style="width: 35%;">Field / Atribut</th>
+            <th class="header-field" style="width: 65%;">Keterangan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="field-label">Nama</td>
+            <td>DWI KRISNANDI ARDIANSYAH</td>
+          </tr>
+          <tr>
+            <td class="field-label">Alamat</td>
+            <td>JL.RIMNAM VILLAGE</td>
+          </tr>
+          <tr>
+            <td class="field-label">Jurusan</td>
+            <td>RPL(Rekayasa Perangkat Lunak)</td>
+          </tr>
+          <tr>
+            <td class="field-label">Jenis Kelamin</td>
+            <td>Laki-laki</td>
+          </tr>
+          <tr>
+            <td class="field-label">Tinggi Badan</td>
+            <td>170 cm</td>
+          </tr>
+          <tr>
+            <td class="field-label">Berat Badan</td>
+            <td>60 kg</td>
+          </tr>
+          <tr>
+            <td class="field-label">Hobi</td>
+            <td>GAMING</td>
+          </tr>
+          <tr>
+            <td class="field-label">No HP</td>
+            <td>081234567890</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="status-badge">
+      <span aria-hidden="true">✓</span> Profil biodata siswa
+    </div>
+  </div>
+
+  
+  <div class="container">
+    <h2>PROFIL BIODATA <span>MERGE & SPLIT</span></h2>
+
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th colspan="3" class="main-header">DATA LENGKAP SISWA HANDSOME</th>
+          </tr>
+          <tr>
+            <th class="header-field" style="width: 25%;">Kategori</th>
+            <th class="header-field" style="width: 35%;">Atribut / Field</th>
+            <th class="header-field" style="width: 40%;">Keterangan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="2" class="category-cell">Data Diri</td>
+            <td>Nama</td>
+            <td>DWI KRISNANDI ARDIANSYAH</td>
+          </tr>
+          <tr>
+            <td>Alamat</td>
+            <td>JL.RIMNAM VILLAGE</td>
+          </tr>
+          <tr>
+            <td class="category-cell">Akademik</td>
+            <td>Jurusan</td>
+            <td>RPL(Rekayasa Perangkat Lunak)</td>
+          </tr>
+          <tr>
+            <td class="category-cell">Lain-lain</td>
+            <td>Hobi</td>
+            <td>GAMING</td>
+          </tr>
+          <tr>
+            <td rowspan="4" class="category-cell">Fisik & Kontak</td>
+            <td rowspan="2">Tinggi & Berat Badan</td>
+            <td>170 cm</td>
+          </tr>
+          <tr>
+            <td>60 kg</td>
+          </tr>
+          <tr>
+            <td>Jenis Kelamin</td>
+            <td>Laki-laki</td>
+          </tr>
+          <tr>
+            <td>No HP</td>
+            <td>081234567890</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <a href="form.html" class="btn-back">Kembali ke Form</a>
+  </div>
+
+</body>
+</html>

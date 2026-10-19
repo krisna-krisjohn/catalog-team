@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hasil Biodata Siswa</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, sans-serif; }
+    body { 
+      background: linear-gradient(135deg, #203837, #304d47 52%, #40584d); 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      min-height: 100vh; 
+      padding: 20px; 
+    }
+    .container { background-color: #f2f1e8; padding: 30px; border-radius: 12px; box-shadow: 0 8px 24px rgba(8, 23, 22, 0.28); width: 100%; max-width: 500px; }
+    h2 { color: #293e3b; margin-bottom: 20px; text-align: center; }
+    .data-group { margin-bottom: 14px; border-bottom: 1px solid #d9dfd7; padding-bottom: 8px; }
+    .label { font-size: 12px; color: #6c7970; text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; }
+    .value { font-size: 16px; color: #2f4540; font-weight: 600; margin-top: 4px; }
+    .btn-back { display: block; width: 100%; text-align: center; background: #a85d58; color: white; border: none; padding: 12px; border-radius: 6px; font-size: 16px; font-weight: 600; cursor: pointer; text-decoration: none; margin-top: 20px; transition: background 0.2s; }
+    .btn-back:hover { background: #8c4845; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Hasil Biodata Siswa</h2>
+    <div class="data-group">
+      <div class="label">Nama Lengkap</div>
+      <div class="value" id="resNama">-</div>
+    </div>
+    <div class="data-group">
+      <div class="label">Alamat</div>
+      <div class="value" id="resAlamat">-</div>
+    </div>
+    <div class="data-group">
+      <div class="label">Jurusan</div>
+      <div class="value" id="resJurusan">-</div>
+    </div>
+    <div class="data-group">
+      <div class="label">Jenis Kelamin</div>
+      <div class="value" id="resJk">-</div>
+    </div>
+    <div class="data-group">
+      <div class="label">Tinggi / Berat Badan</div>
+      <div class="value" id="resPostur">-</div>
+    </div>
+    <div class="data-group">
+      <div class="label">Hobi</div>
+      <div class="value" id="resHobi">-</div>
+    </div>
+    <div class="data-group">
+      <div class="label">No. Handphone</div>
+      <div class="value" id="resNohp">-</div>
+    </div>
+    <a href="form.html" class="btn-back">Kembali ke Form</a>
+  </div>
+  <script>
+    const dataTersimpan = localStorage.getItem('biodataSiswa');
+    if (dataTersimpan) {
+      const data = JSON.parse(dataTersimpan);
+      document.getElementById('resNama').textContent = data.nama;
+      document.getElementById('resAlamat').textContent = data.alamat;
+      document.getElementById('resJurusan').textContent = data.jurusan;
+      document.getElementById('resJk').textContent = data.jk;
+      document.getElementById('resPostur').textContent = `${data.tb} cm / ${data.bb} kg`;
+      document.getElementById('resHobi').textContent = data.hobi;
+      document.getElementById('resNohp').textContent = data.nohp;
+    } else {
+      alert('Data tidak ditemukan! Silakan isi form terlebih dahulu.');
+    }
+  </script>
+</body>
+</html>
